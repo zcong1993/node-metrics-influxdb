@@ -86,7 +86,7 @@ describe('reporter', function() {
     expect(reporter).to.be.an.instanceof(InfluxMetrics.Reporter);
     var gauge = new InfluxMetrics.Gauge();
     reporter.addMetric('my.gauge', gauge);
-    gauge.set(4, { tag1: "gaugeTag" })
+    gauge.set(4, undefined, { tag1: "gaugeTag" })
     reporter.report(true);
     expect(reporter._influx.points).to.have.length(1);
     expect(reporter._influx.points[0]).to.have.string('my.gauge,dim1=my,dim2=gauge,tag0=default,tag1=gaugeTag count=4i');
@@ -129,7 +129,7 @@ describe('reporter', function() {
     expect(reporter).to.be.an.instanceof(InfluxMetrics.Reporter);
     var gauge = new InfluxMetrics.Gauge();
     reporter.addMetric('my.gauge', gauge);
-    gauge.set(4, { tag1: "gaugeTag" })
+    gauge.set(4, undefined, { tag1: "gaugeTag" })
     reporter.report(true);
     expect(reporter._influx.points).to.have.length(1);
     expect(reporter._influx.points[0]).to.have.string('CUSTOM_gauge,dim1=my,dim2=gauge,tag1=gaugeTag count=4i');
