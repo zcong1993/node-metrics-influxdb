@@ -8,14 +8,14 @@ A node.js InfluxDB v0.9 and higher reporting backend for [metrics](https://www.n
 
 # Installation
 
-    $ npm install metrics-influxdb
+    $ npm install @zcong/metrics-influxdb
 
 ## Usage
 
 ```javascript
 "use strict";
 
-var InfluxMetrics = require('metrics-influxdb');
+var InfluxMetrics = require('@zcong/metrics-influxdb');
 
 var reporter = new InfluxMetrics.Reporter({ protocol: 'udp', tags: { 'server': 'one' } });
 var c = new InfluxMetrics.Counter();
@@ -191,7 +191,7 @@ The <code>http</code> and <code>https</code> protocols accept the following addi
 ## A more complex example
 
 ```javascript
-const InfluxMetrics = require('metrics-influxdb');
+const InfluxMetrics = require('@zcong/metrics-influxdb');
 const options = {
     host: "my.influxdb.example.com",
     port: 8086,

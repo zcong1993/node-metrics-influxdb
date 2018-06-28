@@ -1,5 +1,5 @@
 {
-  "name": "metrics-influxdb",
+  "name": "@zcong/metrics-influxdb",
   "version": "1.0.0",
   "description": "InfluxDB backend integration for metrics",
   "main": "lib/index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/brandonhamilton/node-metrics-influxdb.git"
+    "url": "https://github.com/zcong1993/node-metrics-influxdb.git"
   },
   "author": "Brandon Hamilton <brandon.hamilton@gmail.com>",
   "license": "MIT",
